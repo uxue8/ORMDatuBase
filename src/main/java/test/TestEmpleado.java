@@ -26,7 +26,7 @@ public class TestEmpleado {
 		manager =emf.createEntityManager();
 		
 		
-		//Insert
+		//Insert 
 		
 		
 		Empleado e= new Empleado(1L,"rodriguez","Loki",new GregorianCalendar(1991,6,6).getTime());
