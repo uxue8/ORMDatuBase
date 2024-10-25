@@ -30,9 +30,11 @@ public class Empleado implements Serializable {
 	private Date fecha;
 	
 	@OneToOne(cascade= {CascadeType.ALL})
-	@JoinColumn
-	private Direccion id_direccion;
+	@JoinColumn(name= "Id_pasaporte")
+	private Pasaporte id_pasaporte;
 	
+	
+
 	
 
 	public Empleado() {
@@ -88,25 +90,29 @@ public class Empleado implements Serializable {
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
-	
-	
-
-	public Direccion getId_direccion() {
-		return id_direccion;
+	public Pasaporte getId_pasaporte() {
+		return id_pasaporte;
 	}
 
 
-	public void setId_direccion(Direccion id_direccion) {
-		this.id_direccion = id_direccion;
+	public void setId_pasaporte(Pasaporte id_pasaporte) {
+		this.id_pasaporte = id_pasaporte;
 	}
 
 
 	@Override
 	public String toString() {
 		return "Empleado [codigo=" + codigo + ", apellidos=" + apellidos + ", nombre=" + nombre + ", fecha=" + fecha
-				+ ", direccion=" + id_direccion + "]";
+				+ ", id_pasaporte=" + id_pasaporte + "]";
 	}
 	
+
+
+
+	
+	
+
+
 	
 
 }
